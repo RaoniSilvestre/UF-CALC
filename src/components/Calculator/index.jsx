@@ -1,25 +1,20 @@
-export function Calculator({ handleSetToggleRenderToUnitySelection }) {
 
+import { Calc2Unities } from "./Calc2Unities";
+import { Calc3Unities } from "./Calc3Unities";
 
-    function calcularMedia(N1, N2, N3) {
-        var media = 5;
-        var mediaDoAluno = (N1 + N2 + N3) / 3
-        if (N1 == null) {
-            alert("Digite um valor válido.");
-        } else {
-            if ((N1 < 3 || N2 < 3) || N3 < 3) {
-                media = 7;
-            }
-            if (mediaDoAluno >= media) {
-                alert("Você passou!");
-            } else {
-                alert("Você tem problemas!");
-            }
-        }
+export function Calculator({ handleSetToggleRenderToUnitySelection, setUnity }) {
+    var renderUnities;
+
+    if (setUnity === false) {
+        renderUnities = <Calc2Unities />
+    } else if (setUnity === true) {
+        renderUnities = <Calc3Unities />
     }
+
+    
     return (
-        <>
-            <p>Aqui vai a calculadora</p>
+        <>  
+            {renderUnities}
             <button onClick={handleSetToggleRenderToUnitySelection}>Voltar</button>
         </>
     )
