@@ -14,16 +14,28 @@ export function MainMenu() {
 
     function handleSetToggleRenderToCalculator() {
         setToggleRender(true);
-
-
     }
-    if (toggleRender == false) {
+
+    const [setUnity, handleSetUnity] = useState(false)
+
+    function setUnityToTwo() {
+        handleSetUnity(false);
+    }
+
+    function setUnityToThree() {
+        handleSetUnity(true);
+    }
+
+    if (toggleRender === false) {
         render = <UnitySelection
             handleSetToggleRenderToCalculator={handleSetToggleRenderToCalculator}
+            setUnityToTwo={setUnityToTwo}
+            setUnityToThree={setUnityToThree}
         />;
-    } else if (toggleRender == true) {
+    } else if (toggleRender === true) {
         render = <Calculator
             handleSetToggleRenderToUnitySelection={handleSetToggleRenderToUnitySelection}
+            setUnity={setUnity}
         />;
     }
     return (
