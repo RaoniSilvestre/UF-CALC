@@ -1,6 +1,6 @@
-import { useState } from "react";
+
 import { Container, Buttons, Button } from "./styled";
-export function UnitySelection({ handleSetToggleRenderToCalculator }) {
+export function UnitySelection({ handleSetToggleRenderToCalculator, setUnityToTwo, setUnityToThree }) {
 
 
     return (
@@ -9,12 +9,19 @@ export function UnitySelection({ handleSetToggleRenderToCalculator }) {
                 <h3>Quantidade de unidades:</h3>
                 <Buttons>
                     <Button>
-                        <p>um butaum</p>
-                        <button className="butaum" onClick={handleSetToggleRenderToCalculator}>2 Unidades</button>
+                        <p>2 Unidades</p>
+                        <button className="butaum" onClick={() => {
+                            handleSetToggleRenderToCalculator();
+                            setUnityToTwo()
+                        }
+                        }>Selecionar</button>
                     </Button>
                     <Button>
-                        <p>oto butaum</p>
-                        <button className="butaum" onClick={handleSetToggleRenderToCalculator}>3 Unidades</button>
+                        <p>3 Unidades</p>
+                        <button className="butaum" onClick={() => {
+                            handleSetToggleRenderToCalculator();
+                            setUnityToThree()
+                        }}>Selecionar</button>
                     </Button>
                 </Buttons>
 
