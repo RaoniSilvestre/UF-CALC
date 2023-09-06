@@ -42,7 +42,7 @@ export function MainMenu() {
         <>
             <Container>
                 <Content>
-                    <h1>CALCULADORA DA UFRN</h1>
+                    <h1>UF-CALC</h1>
                     <hr></hr>
                     {render}
                 </Content>
