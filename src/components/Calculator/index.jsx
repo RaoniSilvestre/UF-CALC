@@ -1,4 +1,4 @@
-
+import { Retornar } from "./styled";
 import { Calc2Unities } from "./Calc2Unities";
 import { Calc3Unities } from "./Calc3Unities";
 
@@ -11,11 +11,16 @@ export function Calculator({ handleSetToggleRenderToUnitySelection, setUnity }) 
         renderUnities = <Calc3Unities />
     }
 
-    
+
     return (
-        <>  
-            {renderUnities}
-            <button onClick={handleSetToggleRenderToUnitySelection}>Voltar</button>
+        <>
+            <div>
+                {renderUnities}
+            </div>
+            <Retornar>
+                <button onClick={handleSetToggleRenderToUnitySelection}>Voltar</button>
+            </Retornar>
+
         </>
     )
 }
