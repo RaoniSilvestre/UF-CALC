@@ -9,3 +9,5 @@ Dentro do diretório do projeto, rode:
 E depois: `npm start`
 
 
+## Vercel app link
+https://uf-calc.vercel.app/
